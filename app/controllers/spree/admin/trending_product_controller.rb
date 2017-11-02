@@ -13,7 +13,7 @@ module Spree
         if @trending_product.created_at == @trending_product.updated_at
           edit_admin_trending_product_url(@trending_product)
         else
-          admin_slides_url
+          admin_trending_product_url
         end
       end
 
