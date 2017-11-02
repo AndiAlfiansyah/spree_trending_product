@@ -1,0 +1,36 @@
+id:
+  next: Next
+  previous: Previous
+  name: Name
+  body: Deskripsi
+  link_url: Link URL
+  image: Gambar
+  preview: Preview
+  image_file_name: Gambar file name
+  published: Published
+  position: Posisi
+  y: 'Ya'
+  n: 'Tidak'
+
+  activerecord:
+    models:
+      spree/slide: Slide
+
+  spree_slider:
+    config_name: Slider
+    config_description: Atur Slide Konten
+    title: Slides
+    new_slide: Slide Baru
+    editing_slide: Ubah Slide
+    back_to_slides: Kembali ke Slides
+    placeholder_name: Mari kita gunakan nama produk
+    placeholder_link_url: Mari kita gunakan produk url
+    image_tip: Gambar Standar Pertama Produk
+
+  spree_slider_locations:
+    config_name: Slider Lokasi
+    config_description: Atur Slider lokasi
+    title: Slider Lokasi
+    new_location: Lokasi Baru
+    editing_location: Ubah lokasi
+    back_to_locations: Kembali ke lokasi
