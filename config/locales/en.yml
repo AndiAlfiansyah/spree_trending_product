@@ -14,23 +14,16 @@ en:
 
   activerecord:
     models:
-      spree/slide: "Slide"
+      spree/trending_product: "Trending product"
 
   spree_slider:
-    config_name: "Spree Slider"
-    config_description: "Manage Spree Slider contents"
+    config_name: "Spree Trending product"
+    config_description: "Manage Spree Trending product contents"
     title: "Slides"
-    new_slide: "New Slide"
-    editing_slide: "Editing Slide"
-    back_to_slides: "Back to Slides"
+    new_slide: "New Trending product"
+    editing_trending_product: "Editing Trending product"
+    back_to_trending_product: "Back to Slides"
     placeholder_name: "Leave blank to use product name"
     placeholder_link_url: "Leave blank to use product url"
     image_tip: "Default first product image"
 
-  spree_slider_locations:
-    config_name: "Spree Slider Locations"
-    config_description: "Manage Spree Slider Locations"
-    title: "Slider Locations"
-    new_location: "New Location"
-    editing_location: "Editing Location"
-    back_to_locations: "Back to Locations"
