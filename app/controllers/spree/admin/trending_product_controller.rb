@@ -4,13 +4,13 @@ module Spree
       respond_to :html
 
       def index
-        @slides = Spree::Slide.order(:position)
+        @trending_product = Spree::TrendingProduct.order(:position)
       end
 
       private
 
-      def slide_params
-        params.require(:slide).permit(:name, :body, :link_url, :published, :image, :position, :product_id)
+      def trending_product_params
+        params.require(:trending_product).permit(:name, :body, :link_url, :published, :image, :position, :product_id)
       end
     end
   end

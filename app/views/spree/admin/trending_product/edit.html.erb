@@ -1,9 +1,9 @@
 <% content_for :page_title do %>
-  <%= t('spree_slider.editing_slide') %>
+  <%= t('spree_trending_product.editing_trending_product') %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <%= button_link_to t('spree_slider.back_to_slides'), spree.admin_trending_product_path, icon: 'arrow-left' %>
+  <%= button_link_to t('spree_trending_product.back_to_trending_product'), spree.admin_trending_product_path, icon: 'arrow-left' %>
 <% end %>
 
 <%= render 'spree/shared/error_messages', target: @trending_product %>

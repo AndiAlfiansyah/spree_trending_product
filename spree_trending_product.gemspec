@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_trending_product'
   s.version     = '0.0.1'
   s.summary     = 'Spree Trending Product'
-  s.description = 'Adds a slider to the homepage'
+  s.description = 'Adds a trending_product to the homepage'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author            = 'Andi Alfiansyah'
