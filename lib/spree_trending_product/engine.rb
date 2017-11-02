@@ -1,4 +1,4 @@
-module SpreeSlider
+module SpreeTrendingProduct
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
