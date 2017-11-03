@@ -1,5 +1,5 @@
 <% trending_product = trending_product.%>
-  <% if trending_product.present? %>
+
     <div class="container-fluid">
       <div class="trending-wrap">
         <div class="title-content">
@@ -14,13 +14,13 @@
                 <% if trending_product.position == 1 %>
                   <div class="img-trending" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
                     <div class="text"><%= trending_product.name%><br><hr></div>
-                      <div class="overlay"></div>
-                    </div>
+                    <div class="overlay"></div>
+                  </div>
                 <% else %>
                   <div class="img-trending" style="background-image: url('');">
                     <div class="text">Position 1<br><hr></div>
-                      <div class="overlay"></div>
-                    </div>
+                    <div class="overlay"></div>
+                  </div>
                 <% end %>
               </div>
             </div>
@@ -99,4 +99,5 @@
         </div>
       </div>
     </div>
-  <% end %>
+
+<% end %>
