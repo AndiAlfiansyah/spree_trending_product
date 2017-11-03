@@ -4,7 +4,7 @@ module Spree
       respond_to :html
 
       def index
-        @trending_products = Spree::TrendingProduct.order(:position)
+        # @trending_products = Spree::TrendingProduct.order(:position)
       end
 
       private
