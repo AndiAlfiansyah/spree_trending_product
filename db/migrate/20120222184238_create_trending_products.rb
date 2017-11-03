@@ -1,7 +1,7 @@
 class CreateTrendingProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :spree_trending_products do |t|
-      t.string :name
+      t.string :title
       t.string :link_url
       t.boolean :published
       t.string :image_file_name
