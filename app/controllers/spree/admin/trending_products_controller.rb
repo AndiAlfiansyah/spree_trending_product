@@ -10,8 +10,7 @@ module Spree
       private
 
       def location_after_save
-          admin_trending_products_url
-        end
+        admin_trending_products_url
       end
 
       def trending_product_params
