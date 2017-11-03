@@ -1,5 +1,5 @@
-<%- trending_product = trending_product.%>
-
+<% trending_product = trending_product.%>
+  <% if trending_product.present? %>
     <div class="container-fluid">
       <div class="trending-wrap">
         <div class="title-content">
@@ -11,91 +11,20 @@
           <div class="row trending-img-wrap">
             <div class="col-md-3">
               <div class="img-trending-wrap">
-                <% if trending_product.position == 1 %>
+                <%- trending_1 = trending_product.position%>
+                <% if trending_1.position == 1 %>
                   <div class="img-trending" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
                     <div class="text"><%= trending_product.name%><br><hr></div>
-                    <div class="overlay"></div>
-                  </div>
+                      <div class="overlay"></div>
+                    </div>
                 <% else %>
                   <div class="img-trending" style="background-image: url('');">
                     <div class="text">Position 1<br><hr></div>
-                    <div class="overlay"></div>
-                  </div>
+                      <div class="overlay"></div>
+                    </div>
                 <% end %>
               </div>
             </div>
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="img-trending-wrap">
-                    <% if trending_product.position == 2 %>
-                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                        <div class="text"><%= trending_product.name%><br><hr></div>
-                        <div class="overlay"></div>
-                      </div>
-                    <% else %>
-                      <div class="img-trending img-trending-half" style="background-image: url('');">
-                        <div class="text">Position 2<br><hr></div>
-                        <div class="overlay"></div>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-trending-wrap">
-                    <% if trending_product.position == 3 %>
-                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                        <div class="text"><%= trending_product.name%><br><hr></div>
-                        <div class="overlay"></div>
-                      </div>
-                    <% else %>
-                      <div class="img-trending img-trending-half" style="background-image: url('');">
-                        <div class="text">Position 3<br><hr></div>
-                        <div class="overlay"></div>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="img-trending-wrap">
-                    <% if trending_product.position == 4 %>
-                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                       <div class="text"><%= trending_product.name%><br><hr></div>
-                       <div class="overlay"></div>
-                      </div>
-                    <% else %>
-                      <div class="img-trending img-trending-half" style="background-image: url('');">
-                       <div class="text">Position 4<br><hr></div>
-                       <div class="overlay"></div>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="img-trending-wrap">
-                    <% if trending_product.position == 5 %>
-                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                       <div class="text"><%= trending_product.name%><br><hr></div>
-                       <div class="overlay"></div>
-                      </div>
-                    <% else %>
-                      <div class="img-trending img-trending-half" style="background-image: url('');">
-                       <div class="text">Position 5<br><hr></div>
-                       <div class="overlay"></div>
-                      </div>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="your-style">
-                    <h1><a href="#">GET YOUR STYLE HERE</h1></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <% end %>
+<% end %>
