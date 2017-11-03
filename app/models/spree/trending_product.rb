@@ -25,4 +25,13 @@ class Spree::TrendingProduct < ActiveRecord::Base
   def trending_product_image
     !image.file? && product.present? && product.images.any? ? product.images.first.attachment : image
   end
+
+  def self.get_by_position(position)
+    puts self.inspect
+    self.find do  |o|
+      puts o.inspect
+      o.position == position
+    end
+  end
+
 end
