@@ -23,7 +23,6 @@
       </td>
       <td class="align-center"><%= image_tag trending_product.trending_product_image, style: 'width: 120px; height: auto;' %></td>
       <td class="align-center"><%= link_to trending_product.name, object_url(trending_product) %></td>
-      <td class="align-center"><%= link_to trending_product.get_by_position(:id), object_url(trending_product) unless trending_product.product_id.blank? %></td>
       <td class="align-center"><%= trending_product.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
       <td data-hook="admin_trending_products_index_row_actions" class="actions">
         <%= link_to_edit trending_product, no_text: true, class: 'edit' %>
