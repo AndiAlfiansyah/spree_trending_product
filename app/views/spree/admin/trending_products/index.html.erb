@@ -10,7 +10,7 @@
   <thead>
   <tr data-hook="admin_trending_products_index_headers">
     <th colspan="2"><%= Spree.t(:image) %></th>
-    <th><%= Spree.t(:title) %></th>
+    <th><%= Spree.t(:name) %></th>
     <th><%= Spree.t(:position) %></th>
     <th><%= Spree.t(:published) %></th>
     <th data-hook="admin_trending_products_index_header_actions" class="actions"></th>
@@ -23,7 +23,7 @@
         <span class="handle"></span>
       </td>
       <td class="align-center"><%= image_tag trending_product.trending_product_image, style: 'width: 120px; height: auto;' %></td>
-      <td class="align-center"><%= link_to trending_product.title, object_url(trending_product) %></td>
+      <td class="align-center"><%= link_to trending_product.name, object_url(trending_product) %></td>
       <td class="align-center"><%= link_to trending_product.position, object_url(trending_product) unless trending_product.product_id.blank? %></td>
       <td class="align-center"><%= trending_product.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
       <td data-hook="admin_trending_products_index_row_actions" class="actions">

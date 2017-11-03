@@ -14,7 +14,7 @@ module Spree
       end
 
       def trending_product_params
-        params.require(:trending_product).permit(:title, :body, :link_url, :published, :image, :position, :product_id)
+        params.require(:trending_product).permit(:name, :body, :link_url, :published, :image, :position, :product_id)
       end
     end
   end
