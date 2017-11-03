@@ -1,4 +1,4 @@
-class CreateTrendingProducts < ActiveRecord::Migration
+class CreateTrendingProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :spree_trending_products do |t|
       t.string :name
