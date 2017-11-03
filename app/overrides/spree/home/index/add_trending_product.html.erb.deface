@@ -1,3 +1,2 @@
 <!-- insert_before '[data-hook="homepage_products"]' -->
-<% trending_products = Spree::TrendingProduct.published %>
-<%= render partial: 'spree/shared/trending_product', locals: { trending_product: trending_products } %>
+
