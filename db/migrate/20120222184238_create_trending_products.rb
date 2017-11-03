@@ -1,6 +1,6 @@
-class CreateTrendingProduct < ActiveRecord::Migration
+class CreateTrendingProducts < ActiveRecord::Migration
   def change
-    create_table :spree_trending_product do |t|
+    create_table :spree_trending_products do |t|
       t.string :name
       t.string :link_url
       t.boolean :published

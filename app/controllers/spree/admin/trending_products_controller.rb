@@ -1,19 +1,19 @@
 module Spree
   module Admin
-    class TrendingProductController < ResourceController
+    class TrendingProductsController < ResourceController
       respond_to :html
 
       def index
-        @trending_product = Spree::TrendingProduct.order(:position)
+        @trending_products = Spree::TrendingProduct.order(:position)
       end
 
       private
 
       def location_after_save
-        if @trending_product.created_at == @trending_product.updated_at
+        if @trending_products.created_at == @trending_product.updated_at
           edit_admin_trending_product_url(@trending_product)
         else
-          admin_trending_product_url
+          admin_trending_products_url
         end
       end
 

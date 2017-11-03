@@ -1,8 +1,8 @@
 class Spree::TrendingProduct < ActiveRecord::Base
 
   has_attached_file :image,
-                    url: '/spree/trending_product/:id/:style/:basename.:extension',
-                    path: ':rails_root/public/spree/trending_product/:id/:style/:basename.:extension',
+                    url: '/spree/trending_products/:id/:style/:basename.:extension',
+                    path: ':rails_root/public/spree/trending_products/:id/:style/:basename.:extension',
                     convert_options: { all: '-strip -auto-orient -colorspace sRGB' }
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
