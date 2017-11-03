@@ -1,12 +1,6 @@
 <h1><%= t(:trending_product) %></h1>
 
 <table class="table">
-  <tr data-hook="product_id">
-    <th><%= t(:product) %></th>
-    <td>
-      <%= @trending_product.product.name unless @trending_product.product_id.blank? %>
-    </td>
-  </tr>
   <tr data-hook="name">
     <th><%= t(:name) %></th>
     <td>
