@@ -16,13 +16,13 @@ en:
     models:
       spree/trending_product: "Trending product"
 
-  spree_slider:
-    config_name: "Spree Trending product"
+  spree_trending_product:
+    config_name: "Trending product"
     config_description: "Manage Spree Trending product contents"
-    title: "Slides"
-    new_slide: "New Trending product"
+    title: "Trending product"
+    new_trending_product: "New Trending product"
     editing_trending_product: "Editing Trending product"
-    back_to_trending_product: "Back to Slides"
+    back_to_trending_product: "Back to Trending product"
     placeholder_name: "Leave blank to use product name"
     placeholder_link_url: "Leave blank to use product url"
     image_tip: "Default first product image"
