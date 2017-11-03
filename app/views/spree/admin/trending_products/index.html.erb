@@ -6,7 +6,7 @@
   <%= t('spree_trending_product.title') %>
 <% end %>
 
-<table class="table sortable" id="listing_trending_product" data-hook data-sortable-link="<%= update_positions_admin_trending_products_url %>" >
+<table class="table sortable" id="listing_trending_products" data-hook data-sortable-link="<%= update_positions_admin_trending_products_url %>" >
   <thead>
   <tr data-hook="admin_trending_products_index_headers">
     <th colspan="2"><%= Spree.t(:image) %></th>
@@ -17,7 +17,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @trending_product.each do |trending_product|%>
+  <% @trending_products.each do |trending_product|%>
     <tr id="<%= spree_dom_id trending_product %>" data-hook="admin_trending_products_index_rows">
       <td class="no-border">
         <span class="handle"></span>
