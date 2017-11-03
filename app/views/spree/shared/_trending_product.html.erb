@@ -1,102 +1,142 @@
 <% trending_product.each do |trending_product|%>
-  <div class="container-fluid">
-    <div class="trending-wrap">
-      <div class="title-content">
-        <h1>Trending Now</h1>
-        <p>Temukan Gaya Terbaikmu Disini</p>
-        <div class="separator"></div>
-      </div>
+  <% if !trending_product.empty?%>
+    <div class="container-fluid">
+      <div class="trending-wrap">
+        <div class="title-content">
+          <h1>Trending Now</h1>
+          <p>Temukan Gaya Terbaikmu Disini</p>
+          <div class="separator"></div>
+        </div>
         <div class="container-fluid">
           <div class="row trending-img-wrap">
-              <div class="col-md-3">
-                <div class="img-trending-wrap">
-                  <% if trending_product.position == 1 %>
-                    <div class="img-trending" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                      <div class="text"><%= trending_product.name %><br><hr></div>
+            <div class="col-md-3">
+              <div class="img-trending-wrap">
+                <% if trending_product.position == 1 %>
+                  <div class="img-trending" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
+                    <div class="text">Casual<br><hr></div>
                       <div class="overlay"></div>
                     </div>
-                  <% else %>
-                    <div class="img-trending" style="background-image: url('');">
-                      <div class="text">Position 1<br><hr></div>
-                      <div class="overlay"></div>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img-trending-wrap">
+                    <% if trending_product.position == 2 %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>') %>);">
+                        <div class="text">Classic<br><hr></div>
+                        <div class="overlay"></div>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-trending-wrap">
+                    <% if trending_product.position == 3 %>
+                        <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
+                         <div class="text">Stylish<br><hr></div>
+                        <div class="overlay"></div>
+                    <% end %>
                     </div>
-                  <% end %>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-9">
-                  <div class="row">
-                      <div class="col-md-6">
-                        <div class="img-trending-wrap">
-                          <% if trending_product.position == 2 %>
-                            <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>') %>);">
-                              <div class="text"><%= trending_product.name %><br><hr></div>
-                              <div class="overlay"></div>
-                            </div>
-                          <% else %>
-                            <div class="img-trending img-trending-half" style="background-image: url('');">
-                              <div class="text">Position 2<br><hr></div>
-                              <div class="overlay"></div>
-                            </div>
-                          <% end %>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="img-trending-wrap">
-                          <% if trending_product.position == 3 %>
-                              <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                               <div class="text"><%= trending_product.name %><br><hr></div>
-                              <div class="overlay"></div>
-
-                          <% else %>
-                            <div class="img-trending img-trending-half" style="background-image: url('');">
-                              <div class="text">Position 3<br><hr></div>
-                              <div class="overlay"></div>
-                            </div>
-                          <% end %>
-                          </div>
-                        </div>
-                      </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="img-trending-wrap">
+                    <% if trending_product.position == 4 %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
+                       <div class="text">Sweater<br><hr></div>
+                      <div class="overlay"></div>
+                    <% end %>
+                    </div>
                   </div>
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="img-trending-wrap">
-                          <% if trending_product.position == 4 %>
-                            <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                             <div class="text"><%= trending_product.name %><br><hr></div>
-                            <div class="overlay"></div>
-                          <% else %>
-                            <div class="img-trending img-trending-half" style="background-image: url('');">
-                              <div class="text">Position 4<br><hr></div>
-                              <div class="overlay"></div>
-                            </div>
-                          <% end %>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="img-trending-wrap">
-                          <% if trending_product.position == 5 %>
-                            <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
-                             <div class="text"><%= trending_product.name %><br><hr></div>
-                            <div class="overlay"></div>
-                          <% else %>
-                            <div class="img-trending img-trending-half" style="background-image: url('');">
-                              <div class="text">Position 5<br><hr></div>
-                              <div class="overlay"></div>
-                            </div>
-                          <% end %>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="your-style">
-                            <h1><a href="#">GET YOUR STYLE HERE</h1></a>
-                          </div>
-                      </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="img-trending-wrap">
+                    <% if trending_product.position == 5 %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
+                       <div class="text">Watch<br><hr></div>
+                      <div class="overlay"></div>
+                    <% end %>
+                    </div>
                   </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="your-style">
+                      <h1><a href="#">GET YOUR STYLE HERE</h1></a>
+                    </div>
+                </div>
               </div>
+            </div>
           </div>
         </div>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <div class="container-fluid">
+      <div class="trending-wrap">
+        <div class="title-content">
+          <h1>Trending Now</h1>
+          <p>Temukan Gaya Terbaikmu Disini</p>
+          <div class="separator"></div>
+        </div>
+        <div class="container-fluid">
+          <div class="row trending-img-wrap">
+            <div class="col-md-3">
+              <div class="img-trending-wrap">
+                  <div class="img-trending" style="background-image: url('');">
+                    <div class="text">Casual<br><hr></div>
+                      <div class="overlay"></div>
+                    </div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img-trending-wrap">
+                      <div class="img-trending img-trending-half" style="background-image: url('') %>);">
+                        <div class="text">Classic<br><hr></div>
+                        <div class="overlay"></div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-trending-wrap">
+                        <div class="img-trending img-trending-half" style="background-image: url('');">
+                         <div class="text">Stylish<br><hr></div>
+                        <div class="overlay"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="img-trending-wrap">
+                      <div class="img-trending img-trending-half" style="background-image: url('');">
+                       <div class="text">Sweater<br><hr></div>
+                      <div class="overlay"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="img-trending-wrap">
+                      <div class="img-trending img-trending-half" style="background-image: url('');">
+                       <div class="text">Watch<br><hr></div>
+                      <div class="overlay"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="your-style">
+                      <h1><a href="#">GET YOUR STYLE HERE</h1></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <% end %>
