@@ -1,4 +1,5 @@
-<% trending_product.each do |trending_product|%>
+<% trending_product = trending_product.%>
+<%- trending = trending_product.position %>
   <% if trending_product.present? %>
     <div class="container-fluid">
       <div class="trending-wrap">
@@ -11,7 +12,7 @@
           <div class="row trending-img-wrap">
             <div class="col-md-3">
               <div class="img-trending-wrap">
-                <% if trending_product.position == 1 %>
+                <% if trending == 1 %>
                   <div class="img-trending" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
                     <div class="text"><%= trending_product.name%><br><hr></div>
                       <div class="overlay"></div>
@@ -28,7 +29,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="img-trending-wrap">
-                    <% if trending_product.position == 2 %>
+                    <% if trending == 2 %>
                       <div class="img-trending img-trending-half" style="background-image: url('<%= trending_product.trending_product_image.url%>');">
                         <div class="text"><%= trending_product.name%><br><hr></div>
                         <div class="overlay"></div>
