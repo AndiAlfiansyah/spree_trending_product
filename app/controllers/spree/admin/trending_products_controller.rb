@@ -4,7 +4,7 @@ module Spree
       respond_to :html
 
       def index
-        # @trending_products = Spree::TrendingProduct.order(:position)
+        @trending_products = Spree::TrendingProduct.order(:position)
       end
 
       private
@@ -14,7 +14,7 @@ module Spree
       end
 
       def trending_product_params
-        params.require(:trending_product).permit(:name, :body, :link_url, :published, :image, :position)
+        params.require(:trending_product).permit(:name, :body, :link_url, :published, :image, :position, :product_id)
       end
     end
   end
