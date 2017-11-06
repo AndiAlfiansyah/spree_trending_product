@@ -21,7 +21,7 @@
       <td class="no-border">
         <span class="handle"></span>
       </td>
-      <td class="align-center"><%= image_tag trending_product.trending_product_image, style: 'width: 120px; height: auto;' %></td>
+      <td class="align-center"><%= image_tag trending_product.trending_product_image.url, style: 'width: 120px; height: auto;' %></td>
       <td class="align-center"><%= link_to trending_product.name, object_url(trending_product) %></td>
       <td class="align-center"><%= trending_product.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
       <td data-hook="admin_trending_products_index_row_actions" class="actions">

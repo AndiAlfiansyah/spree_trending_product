@@ -1,36 +1,29 @@
 id:
-  next: Next
-  previous: Previous
-  name: Name
-  body: Deskripsi
-  link_url: Link URL
-  image: Gambar
-  preview: Preview
-  image_file_name: Gambar file name
-  published: Published
-  position: Posisi
-  y: 'Ya'
-  n: 'Tidak'
+  next: "Next"
+  previous: "Previous"
+  name: "Name"
+  body: "Body"
+  link_url: "Link URL"
+  image: "Image"
+  preview: "Preview"
+  image_file_name: "Image file name"
+  published: "Published"
+  position: "Position"
+  y: "Yes"
+  n: "No"
 
   activerecord:
     models:
-      spree/slide: Slide
+      spree/trending_product: "Trending Product"
 
-  spree_slider:
-    config_name: Slider
-    config_description: Atur Slide Konten
-    title: Slides
-    new_slide: Slide Baru
-    editing_slide: Ubah Slide
-    back_to_slides: Kembali ke Slides
-    placeholder_name: Mari kita gunakan nama produk
-    placeholder_link_url: Mari kita gunakan produk url
-    image_tip: Gambar Standar Pertama Produk
+  spree_trending_product:
+    config_name: "Trending Product"
+    config_description: "Manage Spree Trending Product Contents"
+    title: "Trending Product"
+    new_trending_product: "New Trending Product"
+    editing_trending_product: "Editing Trending Product"
+    back_to_trending_product: "Back to Trending Product"
+    placeholder_name: "Leave blank to use Product name"
+    placeholder_link_url: "Leave blank to use product url"
+    image_tip: "Default first product image"
 
-  spree_slider_locations:
-    config_name: Slider Lokasi
-    config_description: Atur Slider lokasi
-    title: Slider Lokasi
-    new_location: Lokasi Baru
-    editing_location: Ubah lokasi
-    back_to_locations: Kembali ke lokasi
