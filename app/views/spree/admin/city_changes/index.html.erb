@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+  / <%= plural_resource_name(Spree::CityChange) %>
+  / <%= Spree::CityChange.human_attribute_name(:city_changes) %>
+<% end %>
+
+<% if @city_changes.any? %>
+  <table class="table" id="listing_order_city_changes" data-hook>
+    <thead>
+      <tr data-hook="admin_orders_city_changes_headers">
+        <th><%= Spree::CityChange.human_attribute_name(:type) %></th>
+        <th><%= Spree::CityChange.human_attribute_name(:city_from) %></th>
+        <th><%= Spree::CityChange.human_attribute_name(:city_to) %></th>
+        <th><%= Spree::CityChange.human_attribute_name(:user) %></th>
+        <th><%= Spree::CityChange.human_attribute_name(:timestamp) %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @city_changes.each do |city_change| %>
+        <tr>
+          <td><%= Spree.t("city_machine_cities.#{city_change.name}") %></td>
+          <td><%= city_change.previous_city ? Spree.t(city_change.previous_city, scope: "#{ city_change.name }_city") : Spree.t(:previous_city_missing) %></td>
+          <td><%= Spree.t(city_change.next_city, scope: "#{ city_change.name }_city") %></td>
+          <td>
+            <% if city_change.user %>
+              <% user_login = city_change.user.try(:login) || city_change.user.try(:email) %>
+              <%= link_to user_login, spree.admin_user_path(city_change.user) %>
+            <% end %>
+          </td>
+          <td>
+            <%= pretty_time(city_change.created_at) %>
+            <% if city_change.created_at != city_change.updated_at %>
+              <small><%= Spree::CityChange.human_attribute_name(:updated) %>: <%= pretty_time(city_change.updated_at) %></small>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_city_changes) %>
+  </div>
+<% end %>

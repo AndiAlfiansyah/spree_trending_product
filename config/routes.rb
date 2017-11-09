@@ -5,5 +5,11 @@ Spree::Core::Engine.routes.draw do
         post :update_positions
       end
     end
+
+    resources :states do
+      resources :cities
+    end
+
+    resources :cities
   end
 end

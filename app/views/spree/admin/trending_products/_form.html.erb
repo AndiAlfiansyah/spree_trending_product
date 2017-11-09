@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-2">
+    <%= f.field_container :position do %>
+      <%= f.label :position, t(:position) %>
+      <%= f.number_field :position, class: 'fullwidth form-control' %>
+    <% end %>
+  </div>
+
+  <div class="col-md-10">
+    <div class="field checkbox">
+      <label>
+        <%= f.check_box :published, class: "form-control" %>
+        <%= t(:published) %>
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <%= f.field_container :name do %>
+      <%= f.label :name, t(:name) %><br>
+      <%= f.text_field :name, class: 'fullwidth form-control', placeholder: t('spree_trending_product.placeholder_name') %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :link_url do %>
+      <%= f.label :link_url, t(:link_url) %><br>
+      <%= f.text_field :link_url, class: 'fullwidth form-control', placeholder: t('spree_trending_product.placeholder_link_url') %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :image do %>
+      <%= f.label :image, t(:image) %> <i>(<%= t('spree_trending_product.image_tip') %>)</i><br>
+      <%= f.file_field :image %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :image do %>
+      <% if f.object.image? %>
+        <p>
+          <%= label_tag t(:preview) %>
+          <br>
+          <%= image_tag f.object.image, class: 'img-responsive' %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

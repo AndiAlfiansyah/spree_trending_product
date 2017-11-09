@@ -1,0 +1,19 @@
+<% content_for :page_title do %>
+  <%= t('spree_trending_product.editing_trending_product') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to t('spree_trending_product.back_to_trending_products'), spree.admin_trending_products_path, icon: 'arrow-left' %>
+<% end %>
+
+<%= render 'spree/shared/error_messages', target: @trending_product %>
+
+<%= form_for [:admin, @trending_product], html: { multipart: true } do |f| %>
+  <fieldset class="no-border-top">
+    <%= render partial: 'form', locals: { f: f } %>
+
+    <div data-hook="admin_trending_products_edit_form_buttons">
+      <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+    </div>
+  </fieldset>
+<% end %>
