@@ -31,12 +31,9 @@ id:
 
 
   spree_city:
-    config_name: "City"
-    config_description: "Manage Spree City Contents"
-    title: "Trending Product"
-    new_city: "New Trending Product"
-    editing_city: "Editing Trending Product"
-    back_to_city: "Back to Trending Product"
-    placeholder_name: "Leave blank to use Product name"
-    placeholder_link_url: "Leave blank to use product url"
-    image_tip: "Default first product image"
+    config_name: "Kota"
+    title: "City"
+
+  spree_subdistrict:
+    config_name: 'Kecamatan'
+    title: "Kecamatan"

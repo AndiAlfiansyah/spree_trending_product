@@ -1,0 +1,20 @@
+<div id="new_subdistrict" data-hook></div>
+
+<table class="table" id='listing_subdistricts' data-hook>
+  <thead>
+    <tr data-hook="subdistricts_header">
+      <th><%= Spree.t(:name) %></th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @subdistricts.each do |subdistrict| %>
+      <tr id="<%= spree_dom_id subdistrict %>" data-hook="subdistricts_row">
+        <td><%= subdistrict.name %></td>
+      </tr>
+    <% end %>
+    <% if @subdistricts.empty? %>
+      <tr><td colspan="3"><%= Spree.t(:none) %></td></tr>
+    <% end %>
+  </tbody>
+</table>

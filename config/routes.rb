@@ -11,5 +11,11 @@ Spree::Core::Engine.routes.draw do
     end
 
     resources :cities
+
+    resources :cities do
+      resources :subdistricts
+    end
+
+    resources :subdistricts
   end
 end

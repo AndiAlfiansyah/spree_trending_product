@@ -11,14 +11,10 @@ module Spree
         end
       end
 
-      protected
-
-      def location_after_save
-        admin_state_cities_url(@state)
-      end
-
       def collection
-        super.order(:name)
+        if params[:state_id] != ''
+          Spree::City.order(:name).where(state_id: params[:state_id])
+        end
       end
 
       def load_data

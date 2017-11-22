@@ -1,0 +1,15 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Spree::Subdistrict) %>
+<% end %>
+
+<div data-hook="city" class="form-group">
+  <%= label_tag :city, Spree.t(:city) %>
+  <select id="city" class='observe_field select2' data-base-url="<%=admin_subdistricts_path(format: :js) %>?subdistrict_id=" data-update="#subdistrict-list">
+    <option value="">Semua kota</option>
+    <%= options_from_collection_for_select(@cities, :id, :name) %>
+  </select>
+</div>
+
+<div id="subdistrict-list" data-hook>
+  <%= render partial: 'subdistrict_list'%>
+</div>

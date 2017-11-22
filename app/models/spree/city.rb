@@ -1,6 +1,6 @@
 class Spree::City < ActiveRecord::Base
   belongs_to :state, class_name: 'Spree::State'
-
+  has_many :subdistricts, dependent: :destroy, class_name: 'Spree::Subdistrict'
   validates :state, :name, presence: true
   validates :name, :abbr, uniqueness: { case_sensitive: false }, allow_blank: true
 
