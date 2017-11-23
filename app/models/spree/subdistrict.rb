@@ -1,6 +1,6 @@
 class Spree::Subdistrict < ActiveRecord::Base
   belongs_to :city, class_name: 'Spree::City'
-
+  has_many :address, dependent: :restrict_with_error
   validates :city, :name, presence: true
   validates :name, :abbr, uniqueness: { case_sensitive: false, scope: :city_id }, allow_blank: true
 

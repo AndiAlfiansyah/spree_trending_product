@@ -1,0 +1,4 @@
+var options = '<%= j options_for_select(@cities.pluck(:name, :id)) %>'
+$('.js-select-city').html('')
+$('.js-select-city').html(options)
+$('.js-select-city').trigger('change')

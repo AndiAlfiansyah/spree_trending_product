@@ -18,4 +18,6 @@ Spree::Core::Engine.routes.draw do
 
     resources :subdistricts
   end
+  resources :cities
+  resources :subdistricts
 end

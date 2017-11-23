@@ -1,0 +1,3 @@
+var options = '<%= j options_for_select(@subdistricts.pluck(:name, :id)) %>'
+$('.js-select-subdistrict').html('')
+$('.js-select-subdistrict').html(options)
