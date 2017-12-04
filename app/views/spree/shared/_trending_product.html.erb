@@ -11,10 +11,12 @@
           <div class="col-md-3">
             <div class="img-trending-wrap">
               <% if (trending_1 = trending_product.get_by_position(1)).present? %>
-                <div class="img-trending" style="background-image: url('<%= trending_1.trending_product_image.url%>');">
-                  <div class="text"><%= trending_1.name%><br><hr></div>
+                <%= link_to url_for(trending_1.link_url) do %>
+                  <div class="img-trending" style="background-image: url('<%= trending_1.trending_product_image.url%>');">
+                    <div class="text"><%= trending_1.name%><br><hr></div>
                     <div class="overlay"></div>
                   </div>
+                <% end %>
               <% else %>
                 <div class="img-trending" style="background-image: url('');">
                   <div class="text">Position 1<br><hr></div>
@@ -28,10 +30,12 @@
               <div class="col-md-6">
                 <div class="img-trending-wrap">
                   <% if (trending_2 = trending_product.get_by_position(2)).present? %>
-                    <div class="img-trending img-trending-half" style="background-image: url('<%= trending_2.trending_product_image.url%>');">
-                      <div class="text"><%= trending_2.name%><br><hr></div>
-                      <div class="overlay"></div>
-                    </div>
+                    <%= link_to url_for(trending_2.link_url) do %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_2.trending_product_image.url%>');">
+                        <div class="text"><%= trending_2.name%><br><hr></div>
+                        <div class="overlay"></div>
+                      </div>
+                    <% end %>
                   <% else %>
                     <div class="img-trending img-trending-half" style="background-image: url('');">
                       <div class="text">Position 2<br><hr></div>
@@ -43,10 +47,12 @@
               <div class="col-md-6">
                 <div class="img-trending-wrap">
                   <% if (trending_3 = trending_product.get_by_position(3)).present? %>
-                    <div class="img-trending img-trending-half" style="background-image: url('<%= trending_3.trending_product_image.url%>');">
-                      <div class="text"><%= trending_3.name%><br><hr></div>
-                      <div class="overlay"></div>
-                    </div>
+                    <%= link_to url_for(trending_3.link_url) do %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_3.trending_product_image.url%>');">
+                        <div class="text"><%= trending_3.name%><br><hr></div>
+                        <div class="overlay"></div>
+                      </div>
+                    <% end %>
                   <% else %>
                     <div class="img-trending img-trending-half" style="background-image: url('');">
                       <div class="text">Position 3<br><hr></div>
@@ -60,10 +66,12 @@
               <div class="col-md-3">
                 <div class="img-trending-wrap">
                   <% if (trending_4 = trending_product.get_by_position(4)).present? %>
-                    <div class="img-trending img-trending-half" style="background-image: url('<%= trending_4.trending_product_image.url%>');">
-                     <div class="text"><%= trending_4.name%><br><hr></div>
-                     <div class="overlay"></div>
-                    </div>
+                    <%= link_to url_for(trending_4.link_url) do %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_4.trending_product_image.url%>');">
+                       <div class="text"><%= trending_4.name%><br><hr></div>
+                       <div class="overlay"></div>
+                      </div>
+                    <% end %>
                   <% else %>
                     <div class="img-trending img-trending-half" style="background-image: url('');">
                      <div class="text">Position 4<br><hr></div>
@@ -75,10 +83,12 @@
               <div class="col-md-3">
                 <div class="img-trending-wrap">
                   <% if (trending_5 = trending_product.get_by_position(5)).present? %>
-                    <div class="img-trending img-trending-half" style="background-image: url('<%= trending_5.trending_product_image.url%>');">
-                     <div class="text"><%= trending_5.name%><br><hr></div>
-                     <div class="overlay"></div>
-                    </div>
+                    <%= link_to url_for(trending_5.link_url) do %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_5.trending_product_image.url%>');">
+                       <div class="text"><%= trending_5.name%><br><hr></div>
+                       <div class="overlay"></div>
+                      </div>
+                    <% end %>
                   <% else %>
                     <div class="img-trending img-trending-half" style="background-image: url('');">
                      <div class="text">Position 5<br><hr></div>
@@ -90,10 +100,12 @@
               <div class="col-md-6">
                 <div class="img-trending-wrap">
                   <% if (trending_6 = trending_product.get_by_position(6)).present? %>
-                    <div class="img-trending img-trending-half" style="background-image: url('<%= trending_6.trending_product_image.url%>');">
-                     <div class="text"><%= trending_6.name%><br><hr></div>
-                     <div class="overlay"></div>
-                    </div>
+                    <%= link_to url_for(trending_1.link_url) do %>
+                      <div class="img-trending img-trending-half" style="background-image: url('<%= trending_6.trending_product_image.url%>');">
+                       <div class="text"><%= trending_6.name%><br><hr></div>
+                       <div class="overlay"></div>
+                      </div>
+                    <% end %>
                   <% else %>
                     <div class="img-trending img-trending-half" style="background-image: url('');">
                      <div class="text">Position 6<br><hr></div>
