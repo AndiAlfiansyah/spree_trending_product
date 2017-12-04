@@ -32,5 +32,4 @@ class Spree::TrendingProduct < ActiveRecord::Base
       o.position == position
     end
   end
-
 end
